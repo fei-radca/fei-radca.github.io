@@ -36,6 +36,11 @@
   color: #ffffff;
 }
 
+#form-role-check .form-check input{
+  border-radius: 50%;
+  padding: 0;
+}
+
 
 /*--------------------------------------------------------------
 # General

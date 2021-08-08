@@ -10,7 +10,7 @@
     <title>FEI radca</title>
 
     <!-- Favicons -->
-    <link href="assets/img/fei-round.png" rel="icon">
+    <link href="assets/img/favicon.png" rel="icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -42,9 +42,9 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link " href="index.html">Domov</a></li>
+                <li><a class="nav-link " href="index.html#hero">Domov</a></li>
                 <li><a class="nav-link " href="index.html#about">O nás</a></li>
-                <li><a class="nav-link scrollto active" href="faq.html">Otázky ohľadom štúdia</a></li>
+                <li><a class="nav-link " href="faq.html">Otázky ohľadom štúdia</a></li>
                 <!--                <li class="dropdown"><a href="faq.html"><span>Otázky ohľadom štúdia</span> <i class="bi bi-chevron-down"></i></a>-->
                 <!--                    <ul>-->
                 <!--                        <li><a href="#">Budúci prvák </a></li>-->
@@ -52,7 +52,7 @@
                 <!--                        <li><a href="#">Inžinier</a></li>-->
                 <!--                    </ul>-->
                 <!--                </li>-->
-                <li><a class="nav-link " href="join-us.html">Chcem sa pridať</a></li>
+                <li><a class="nav-link scrollto active" href="#">Chcem sa pridať</a></li>
                 <li><a class="nav-link " href="index.html#contact">Kontakt</a></li>
 
                 <!--<li><a class="getstarted scrollto" href="#about">Chcem sa pridať</a></li>-->
@@ -62,94 +62,65 @@
 
     </div>
 </header><!-- End Header -->
-<!-- ======= Portfolio Section ======= -->
-<section id="faq" class="portfolio faq">
-    <div class="container">
+<main id="main">
 
-        <div class="section-title mt-5" data-aos="fade-up">
-            <h1>Otázky ohľadom štúdia</h1>
-            <p>Najčastejšie otázky a odpovede. Ak nenájdete svoju otázku, napíšte nám a my vám s radosťou odpovieme.</p>
-        </div>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact mt-5">
+        <div class="container">
 
-        <div class="row" data-aos="fade-up" data-aos-delay="200">
-            <div class="col-lg-12 d-flex justify-content-center">
-                <ul id="portfolio-flters">
-                    <li data-filter="*" class="filter-active">Všetky</li>
-                    <li data-filter=".filter-first">Budúci prvák</li>
-                    <li data-filter=".filter-bc">Bakalár</li>
-                    <li data-filter=".filter-ing">Inžinier</li>
-                </ul>
+            <div class="section-title" data-aos="fade-up">
+                <h1>Chcem sa pridať</h1>
             </div>
-        </div>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
-            <div class="portfolio-item filter-first">
-                <div class="row faq-item d-flex align-items-stretch">
-                    <div class="col-lg-5">
-                        <i class="ri-question-line"></i>
-                        <h4>otazka</h4>
-                    </div>
-                    <div class="col-lg-7">
-                        <p>
-                            Feugiat non curabitur gravida.n.
-                        </p>
-                    </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
+                    <form action="https://formspree.io/f/mdoywvge"
+                          method="POST" role="form" class="php-email-form">
+                        <input name="subject" type="hidden" value="Chcem sa pridať" />
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Meno" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="surname" class="form-control" placeholder="Priezvisko" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="aisId" placeholder="AIS ID" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="_replyto" placeholder="Email" required>
+                        </div>
+
+                        <div id="form-role-check" class="form-group">
+                            <span>O ktorú oblasť máš najvačší záujem?</span>
+                            <select class="form-select" name="role" aria-label="Default select example">
+<!--                                <option selected>-</option>-->
+                                <option value="zastupca">Ročníkový zastupca</option>
+                                <option value="radca">Radca</option>
+                                <option value="doucovatel">Doučovateľ</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Poznámka / správa " required></textarea>
+                        </div>
+                        <div class="my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Tvoja správa bola odoslaná. Ďakujeme!</div>
+                        </div>
+                        <div class="text-center"><button type="submit">Odoslať</button></div>
+                    </form>
                 </div>
-            </div><!-- End F.A.Q Item-->
 
-            <div class="portfolio-item filter-first">
-                <div class="row faq-item d-flex align-items-stretch">
-                    <div class="col-lg-5">
-                        <i class="ri-question-line"></i>
-                        <h4>otazka</h4>
-                    </div>
-                    <div class="col-lg-7">
-                        <p>
-                            Feugiat non curabitur gravida.n.
-                        </p>
-                    </div>
-                </div>
-            </div><!-- End F.A.Q Item-->
-
-
-            <div class="portfolio-item filter-bc">
-                <div class="row faq-item d-flex align-items-stretch">
-                    <div class="col-lg-5">
-                        <i class="ri-question-line"></i>
-                        <h4>otazka</h4>
-                    </div>
-                    <div class="col-lg-7">
-                        <p>
-                            Feugiat non curabitur gravida.n.
-                        </p>
-                    </div>
-                </div>
-            </div><!-- End F.A.Q Item-->
-
-            <div class=" portfolio-item filter-ing">
-                <div class="row faq-item d-flex align-items-stretch">
-                    <div class="col-lg-5">
-                        <i class="ri-question-line"></i>
-                        <h4>otazka</h4>
-                    </div>
-                    <div class="col-lg-7">
-                        <p>
-                            Feugiat non curabitur gravida.n.
-                        </p>
-                    </div>
-                </div>
-            </div><!-- End F.A.Q Item-->
+            </div>
 
         </div>
-    </div>
-</section><!-- End Portfolio Section -->
-
-
+    </section><!-- End Contact Section -->
 
 </main><!-- End #main -->
 
 <!-- ======= Footer ======= -->
-<footer id="footer" class="mt-5">
+<footer id="footer">
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-lg-12 text-lg-left text-center">
