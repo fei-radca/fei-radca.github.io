@@ -59,17 +59,13 @@
       if( response.ok ) {
         return response.text()
       } else {
-        throw new Error(`error 1 ${response.status} ${response.statusText} ${response.url}`);
+        throw new Error(`${response.status} ${response.statusText} ${response.url}`);
       }
     })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
-        thisForm.querySelector('.sent-message').classList.add('d-block');
-        thisForm.reset(); 
-      } else {
-        throw new Error(data ? "error2" : 'Form submission failed and no error message returned from: ' + action);
-      }
+      thisForm.querySelector('.sent-message').classList.add('d-block');
+      thisForm.reset();
     })
     .catch((error) => {
       displayError(thisForm, error);
